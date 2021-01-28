@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="376.291" height="102.092" viewBox="0 0 376.291 102.092">
+  <defs>
+    <filter id="Path_2" x="228.022" y="0" width="148.269" height="96.922" filterUnits="userSpaceOnUse">
+      <feOffset dy="16" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Path_1" x="0" y="0.482" width="376.118" height="101.609" filterUnits="userSpaceOnUse">
+      <feOffset dy="10" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-2"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="profile_bg" transform="translate(-3507.248 -8810.018)">
+    <g transform="matrix(1, 0, 0, 1, 3507.25, 8810.02)" filter="url(#Path_2)">
+      <path id="Path_2-2" data-name="Path 2" d="M3739.555,8744.94l7.209,5.607,15.753,9.879,12.094,5.013,93.428-.221-.221-70.693-7.3.109-4.591,6.417s-10.178,10.068-10.621,10.123-13.884,9.846-13.884,9.846l-19.858,8.795-14.327,4.924-13.829,3.429-14.935,3.264L3755.8,8743.2Z" transform="translate(-3501.25 -8694.02)" fill="#3279a6" stroke="#707070" stroke-linejoin="round" stroke-width="1"/>
+    </g>
+    <g transform="matrix(1, 0, 0, 1, 3507.25, 8810.02)" filter="url(#Path_1)">
+      <path id="Path_1-2" data-name="Path 1" d="M3511,8684l-.25,64.408,10.563,2.992,28.7,6.637,17.668,2.992,13.275,1.775,12.994,1.4,11.966.936h25.147l36.14.329,15.089.138,13.088-2.15,34.215-4.02,35.056-8.039,35.991-11.592,15.425-7.292,15.612-8.787,11.592-8.134,9.442-8.507,7.385-8.319,3.459-6.077,4.02-8.413H3860.1l-5.7,8.413-7.011,6.077-7.292,5.889-12.34,7.386-15.144,7.1-20.379,6.356-18.135,4.395-18.042,2.617-18.79,2.057-25.708.841h-19.725l-23.09-1.683-23.932-3.271-32.532-6.076-29.073-8.227-31.784-11.966-27.3-13.555-10.75-6.637Z" transform="translate(-3501.25 -8683.02)" fill="#4e84a6" stroke="#000" stroke-linejoin="round" stroke-width="1" opacity="0.67"/>
+    </g>
+  </g>
+</svg>

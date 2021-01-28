@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.osdifa.anrifo">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Anrifo">
+        <activity android:name=".Problem" />
+        <activity android:name=".Search" />
+        <activity android:name=".ShowImage" />
+        <activity
+            android:name=".Message"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ConsultantDetail"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".PaymentOption2"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".PayPal"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".GooglePay"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Paytm"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Price"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".PaymentOption"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Accepted"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Game.GameActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".Game.MainActivity2"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".Rejected"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Schedule"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Profession"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".NumberVerification"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".BecomeConsultant"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".EditProfile"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Help"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ForgetPassword"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Verification"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".LoginActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".IntroductoryActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait" />
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.facebook.CustomTabActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="@string/fb_login_protocol_scheme" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name=".Helper.InternetService"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name=".Notification.MyFirebaseIdService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".Notification.MyFirebaseMessaging"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>

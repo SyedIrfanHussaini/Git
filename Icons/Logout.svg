@@ -1,0 +1,8 @@
+<svg id="Logout" xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200">
+  <rect id="Area" width="200" height="200" fill="#fcfcfc" opacity="0"/>
+  <g id="Icon" transform="translate(1.29 2.499)">
+    <path id="Path" d="M75,175H41.667A16.667,16.667,0,0,1,25,158.333V41.667A16.667,16.667,0,0,1,41.667,25H75" transform="translate(-1.29 -2.499)" fill="none" stroke="#3d3d3d" stroke-linecap="round" stroke-linejoin="round" stroke-width="16.667"/>
+    <path id="Path-2" data-name="Path" d="M133.333,141.667,175,100,133.333,58.333" transform="translate(-1.29 -2.499)" fill="none" stroke="#3d3d3d" stroke-linecap="round" stroke-linejoin="round" stroke-width="16.667"/>
+    <line id="Line" x1="100" transform="translate(73.71 97.501)" fill="none" stroke="#3d3d3d" stroke-linecap="round" stroke-linejoin="round" stroke-width="16.667"/>
+  </g>
+</svg>

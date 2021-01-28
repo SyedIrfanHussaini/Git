@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:layout_marginBottom="@dimen/material_size_8"
+    android:background="@drawable/main_card_bg">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/mainImage"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="14dp"
+        android:src="@mipmap/ic_launcher"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/mainName"
+        android:layout_width="0dp"
+        android:layout_height="23dp"
+        android:layout_marginStart="18sp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/nunito_bold"
+        android:text="Dr. Nayeem Ashraf"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/mainImage"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/mainProfession"
+        android:layout_width="0dp"
+        android:layout_height="23dp"
+        android:layout_marginStart="18sp"
+        android:layout_marginTop="6dp"
+        android:fontFamily="@font/nunito_semibold"
+        android:text="Dr. Nayeem Ashraf"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/mainImage"
+        app:layout_constraintTop_toBottomOf="@id/mainName" />
+
+    <TextView
+        android:id="@+id/mainFees"
+        android:layout_width="0dp"
+        android:layout_height="23dp"
+        android:layout_marginStart="18sp"
+        android:layout_marginTop="6dp"
+        android:fontFamily="@font/nunito_semibold"
+        android:text="Consultancy Fees: 100 Rs"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/mainImage"
+        app:layout_constraintTop_toBottomOf="@id/mainProfession" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,998 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Schedule">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageButton
+                android:id="@+id/backBtn3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="22dp"
+                android:layout_marginTop="18dp"
+                android:background="@android:color/transparent"
+                android:elevation="22dp"
+                android:onClick="Back"
+                android:src="@drawable/left_arrow"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/title2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Schedule"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/subTitle1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Select your online timings"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/backBtn3" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="26dp"
+                android:background="@drawable/sharp_border"
+                android:padding="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/subTitle1"
+                app:layout_constraintWidth_percent=".9">
+
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Monday"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/monday"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayout8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@+id/monday">
+
+                    <TextView
+                        android:id="@+id/mondayStart"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="11dp"
+                        android:background="@drawable/sharp_border"
+                        android:onClick="mondayStart1"
+                        android:padding="@dimen/material_size_4"
+                        android:text="00:00 AM"
+                        android:textColor="@color/black"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="to"
+                        app:layout_constraintBottom_toBottomOf="@+id/mondayStart"
+                        app:layout_constraintEnd_toStartOf="@+id/mondayEnd"
+                        app:layout_constraintStart_toEndOf="@+id/mondayStart"
+                        app:layout_constraintTop_toTopOf="@+id/mondayEnd" />
+
+                    <TextView
+                        android:id="@+id/mondayEnd"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="11dp"
+                        android:background="@drawable/sharp_border"
+                        android:onClick="mondayEnd1"
+                        android:padding="@dimen/material_size_4"
+                        android:text="00:00 AM"
+                        android:textColor="@color/black"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/mondayTxtBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="11dp"
+                        android:background="@android:color/transparent"
+                        android:onClick="monday"
+                        android:text="+ Add New Slot"
+                        android:textAllCaps="false"
+                        android:textColor="@color/blue"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/mondayStart" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/mondayConstraint"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="11dp"
+                    android:visibility="gone"
+                    app:layout_constraintTop_toBottomOf="@id/constraintLayout8">
+
+                    <TextView
+                        android:id="@+id/mondayStart2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/sharp_border"
+                        android:onClick="mondayStart2"
+                        android:padding="@dimen/material_size_4"
+                        android:text="00:00 AM"
+                        android:textColor="@color/black"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="to"
+                        app:layout_constraintBottom_toBottomOf="@+id/mondayStart2"
+                        app:layout_constraintEnd_toStartOf="@+id/mondayEnd2"
+                        app:layout_constraintStart_toEndOf="@+id/mondayStart2"
+                        app:layout_constraintTop_toTopOf="@+id/mondayEnd2" />
+
+                    <TextView
+                        android:id="@+id/mondayEnd2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/sharp_border"
+                        android:onClick="mondayEnd2"
+                        android:padding="@dimen/material_size_4"
+                        android:text="00:00 AM"
+                        android:textColor="@color/black"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="26dp"
+                android:background="@drawable/sharp_border"
+                android:padding="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout1"
+                app:layout_constraintWidth_percent=".9">
+
+                <TextView
+                    android:id="@+id/textView7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tuesday"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/tuesday"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayout9"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@+id/tuesday">
+
+                    <TextView
+                        android:id="@+id/tuesdayStart"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="11dp"
+                        android:background="@drawable/sharp_border"
+                        android:onClick="tuesdayStart1"
+                        android:padding="@dimen/material_size_4"
+                        android:text="00:00 AM"
+                        android:textColor="@color/black"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="to"
+                        app:layout_constraintBottom_toBottomOf="@+id/tuesdayStart"
+                        app:layout_constraintEnd_toStartOf="@+id/tuesdayEnd"
+                        app:layout_constraintStart_toEndOf="@+id/tuesdayStart"
+                        app:layout_constraintTop_toTopOf="@+id/tuesdayEnd" />
+
+                    <TextView
+                        android:id="@+id/tuesdayEnd"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="11dp"
+                        android:background="@drawable/sharp_border"
+                        android:onClick="tuesdayEnd1"
+                        android:padding="@dimen/material_size_4"
+                        android:text="00:00 AM"
+                        android:textColor="@color/black"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tuesdayTxtBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="11dp"
+                        android:background="@android:color/transparent"
+                        android:onClick="tuesday"
+                        android:text="+ Add New Slot"
+                        android:textAllCaps="false"
+                        android:textColor="@color/blue"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tuesdayStart" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/tuesdayConstraint"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="11dp"
+                    android:visibility="gone"
+                    app:layout_constraintTop_toBottomOf="@id/constraintLayout9">
+
+                    <TextView
+                        android:id="@+id/tuesdayStart2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/sharp_border"
+                        android:onClick="tuesdayStart2"
+                        android:padding="@dimen/material_size_4"
+                        android:text="00:00 AM"
+                        android:textColor="@color/black"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="to"
+                        app:layout_constraintBottom_toBottomOf="@+id/tuesdayStart2"
+                        app:layout_constraintEnd_toStartOf="@+id/tuesdayEnd2"
+                        app:layout_constraintStart_toEndOf="@+id/tuesdayStart2"
+                        app:layout_constraintTop_toTopOf="@+id/tuesdayEnd2" />
+
+                    <TextView
+                        android:id="@+id/tuesdayEnd2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/sharp_border"
+                        android:onClick="tuesdayEnd2"
+                        android:padding="@dimen/material_size_4"
+                        android:text="00:00 AM"
+                        android:textColor="@color/black"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="26dp"
+                android:background="@drawable/sharp_border"
+                android:padding="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout2"
+                app:layout_constraintWidth_percent=".9">
+
+                <TextView
+                    android:id="@+id/textView8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Wednesday"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/wednesday"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayout10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@+id/wednesday">
+
+                    <TextView
+                        android:id="@+id/wednesdayStart"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="11dp"
+                        android:background="@drawable/sharp_border"
+                        android:onClick="wednesdayStart1"
+                        android:padding="@dimen/material_size_4"
+                        android:text="00:00 AM"
+                        android:textColor="@color/black"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="to"
+                        app:layout_constraintBottom_toBottomOf="@+id/wednesdayStart"
+                        app:layout_constraintEnd_toStartOf="@+id/wednesdayEnd"
+                        app:layout_constraintStart_toEndOf="@+id/wednesdayStart"
+                        app:layout_constraintTop_toTopOf="@+id/wednesdayEnd" />
+
+                    <TextView
+                        android:id="@+id/wednesdayEnd"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="11dp"
+                        android:background="@drawable/sharp_border"
+                        android:onClick="wednesdayEnd1"
+                        android:padding="@dimen/material_size_4"
+                        android:text="00:00 AM"
+                        android:textColor="@color/black"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/wednesdayTxtBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="11dp"
+                        android:background="@android:color/transparent"
+                        android:onClick="wednesday"
+                        android:text="+ Add New Slot"
+                        android:textAllCaps="false"
+                        android:textColor="@color/blue"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/wednesdayStart" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/wednesdayConstraint"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="11dp"
+                    android:visibility="gone"
+                    app:layout_constraintTop_toBottomOf="@id/constraintLayout10">
+
+                    <TextView
+                        android:id="@+id/wednesdayStart2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/sharp_border"
+                        android:onClick="wednesdayStart2"
+                        android:padding="@dimen/material_size_4"
+                        android:text="00:00 AM"
+                        android:textColor="@color/black"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="to"
+                        app:layout_constraintBottom_toBottomOf="@+id/wednesdayStart2"
+                        app:layout_constraintEnd_toStartOf="@+id/wednesdayEnd2"
+                        app:layout_constraintStart_toEndOf="@+id/wednesdayStart2"
+                        app:layout_constraintTop_toTopOf="@+id/wednesdayEnd2" />
+
+                    <TextView
+                        android:id="@+id/wednesdayEnd2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/sharp_border"
+                        android:onClick="wednesdayEnd2"
+                        android:padding="@dimen/material_size_4"
+                        android:text="00:00 AM"
+                        android:textColor="@color/black"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="26dp"
+                android:background="@drawable/sharp_border"
+                android:padding="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout3"
+                app:layout_constraintWidth_percent=".9">
+
+                <TextView
+                    android:id="@+id/textView9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Thursday"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/thursday"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayout11"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@+id/thursday">
+
+                    <TextView
+                        android:id="@+id/thursdayStart"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="11dp"
+                        android:background="@drawable/sharp_border"
+                        android:onClick="thursdayStart1"
+                        android:padding="@dimen/material_size_4"
+                        android:text="00:00 AM"
+                        android:textColor="@color/black"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="to"
+                        app:layout_constraintBottom_toBottomOf="@+id/thursdayStart"
+                        app:layout_constraintEnd_toStartOf="@+id/thursdayEnd"
+                        app:layout_constraintStart_toEndOf="@+id/thursdayStart"
+                        app:layout_constraintTop_toTopOf="@+id/thursdayEnd" />
+
+                    <TextView
+                        android:id="@+id/thursdayEnd"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="11dp"
+                        android:background="@drawable/sharp_border"
+                        android:onClick="thursdayEnd1"
+                        android:padding="@dimen/material_size_4"
+                        android:text="00:00 AM"
+                        android:textColor="@color/black"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/thursdayTxtBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="11dp"
+                        android:background="@android:color/transparent"
+                        android:onClick="thursday"
+                        android:text="+ Add New Slot"
+                        android:textAllCaps="false"
+                        android:textColor="@color/blue"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/thursdayStart" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/thursdayConstraint"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="11dp"
+                    android:visibility="gone"
+                    app:layout_constraintTop_toBottomOf="@id/constraintLayout11">
+
+                    <TextView
+                        android:id="@+id/thursdayStart2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/sharp_border"
+                        android:onClick="thursdayStart2"
+                        android:padding="@dimen/material_size_4"
+                        android:text="00:00 AM"
+                        android:textColor="@color/black"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="to"
+                        app:layout_constraintBottom_toBottomOf="@+id/thursdayStart2"
+                        app:layout_constraintEnd_toStartOf="@+id/thursdayEnd2"
+                        app:layout_constraintStart_toEndOf="@+id/thursdayStart2"
+                        app:layout_constraintTop_toTopOf="@+id/thursdayEnd2" />
+
+                    <TextView
+                        android:id="@+id/thursdayEnd2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/sharp_border"
+                        android:onClick="thursdayEnd2"
+                        android:padding="@dimen/material_size_4"
+                        android:text="00:00 AM"
+                        android:textColor="@color/black"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="26dp"
+                android:background="@drawable/sharp_border"
+                android:padding="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout4"
+                app:layout_constraintWidth_percent=".9">
+
+                <TextView
+                    android:id="@+id/textView10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Friday"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/friday"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayout12"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@+id/friday">
+
+                    <TextView
+                        android:id="@+id/fridayStart"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="11dp"
+                        android:background="@drawable/sharp_border"
+                        android:onClick="fridayStart1"
+                        android:padding="@dimen/material_size_4"
+                        android:text="00:00 AM"
+                        android:textColor="@color/black"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="to"
+                        app:layout_constraintBottom_toBottomOf="@+id/fridayStart"
+                        app:layout_constraintEnd_toStartOf="@+id/fridayEnd"
+                        app:layout_constraintStart_toEndOf="@+id/fridayStart"
+                        app:layout_constraintTop_toTopOf="@+id/fridayEnd" />
+
+                    <TextView
+                        android:id="@+id/fridayEnd"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="11dp"
+                        android:background="@drawable/sharp_border"
+                        android:onClick="fridayEnd1"
+                        android:padding="@dimen/material_size_4"
+                        android:text="00:00 AM"
+                        android:textColor="@color/black"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/fridayTxtBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="11dp"
+                        android:background="@android:color/transparent"
+                        android:onClick="friday"
+                        android:text="+ Add New Slot"
+                        android:textAllCaps="false"
+                        android:textColor="@color/blue"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/fridayStart" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/fridayConstraint"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="11dp"
+                    android:visibility="gone"
+                    app:layout_constraintTop_toBottomOf="@id/constraintLayout12">
+
+                    <TextView
+                        android:id="@+id/fridayStart2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/sharp_border"
+                        android:onClick="fridayStart2"
+                        android:padding="@dimen/material_size_4"
+                        android:text="00:00 AM"
+                        android:textColor="@color/black"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="to"
+                        app:layout_constraintBottom_toBottomOf="@+id/fridayStart2"
+                        app:layout_constraintEnd_toStartOf="@+id/fridayEnd2"
+                        app:layout_constraintStart_toEndOf="@+id/fridayStart2"
+                        app:layout_constraintTop_toTopOf="@+id/fridayEnd2" />
+
+                    <TextView
+                        android:id="@+id/fridayEnd2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/sharp_border"
+                        android:onClick="fridayEnd2"
+                        android:padding="@dimen/material_size_4"
+                        android:text="00:00 AM"
+                        android:textColor="@color/black"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout6"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="26dp"
+                android:background="@drawable/sharp_border"
+                android:padding="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout5"
+                app:layout_constraintWidth_percent=".9">
+
+                <TextView
+                    android:id="@+id/textView11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Saturday"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/saturday"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayout13"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@+id/saturday">
+
+                    <TextView
+                        android:id="@+id/saturdayStart"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="11dp"
+                        android:background="@drawable/sharp_border"
+                        android:onClick="saturdayStart1"
+                        android:padding="@dimen/material_size_4"
+                        android:text="00:00 AM"
+                        android:textColor="@color/black"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="to"
+                        app:layout_constraintBottom_toBottomOf="@+id/saturdayStart"
+                        app:layout_constraintEnd_toStartOf="@+id/saturdayEnd"
+                        app:layout_constraintStart_toEndOf="@+id/saturdayStart"
+                        app:layout_constraintTop_toTopOf="@+id/saturdayEnd" />
+
+                    <TextView
+                        android:id="@+id/saturdayEnd"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="11dp"
+                        android:background="@drawable/sharp_border"
+                        android:onClick="saturdayEnd1"
+                        android:padding="@dimen/material_size_4"
+                        android:text="00:00 AM"
+                        android:textColor="@color/black"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/saturdayTxtBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="11dp"
+                        android:background="@android:color/transparent"
+                        android:onClick="saturday"
+                        android:text="+ Add New Slot"
+                        android:textAllCaps="false"
+                        android:textColor="@color/blue"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/saturdayStart" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/saturdayConstraint"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="11dp"
+                    android:visibility="gone"
+                    app:layout_constraintTop_toBottomOf="@id/constraintLayout13">
+
+                    <TextView
+                        android:id="@+id/saturdayStart2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/sharp_border"
+                        android:onClick="saturdayStart2"
+                        android:padding="@dimen/material_size_4"
+                        android:text="00:00 AM"
+                        android:textColor="@color/black"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="to"
+                        app:layout_constraintBottom_toBottomOf="@+id/saturdayStart2"
+                        app:layout_constraintEnd_toStartOf="@+id/saturdayEnd2"
+                        app:layout_constraintStart_toEndOf="@+id/saturdayStart2"
+                        app:layout_constraintTop_toTopOf="@+id/saturdayEnd2" />
+
+                    <TextView
+                        android:id="@+id/saturdayEnd2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/sharp_border"
+                        android:onClick="saturdayEnd2"
+                        android:padding="@dimen/material_size_4"
+                        android:text="00:00 AM"
+                        android:textColor="@color/black"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout7"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="26dp"
+                android:background="@drawable/sharp_border"
+                android:padding="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout6"
+                app:layout_constraintWidth_percent=".9">
+
+                <TextView
+                    android:id="@+id/textView12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sunday"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/sunday"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayout14"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    app:layout_constraintTop_toBottomOf="@+id/sunday">
+
+                    <TextView
+                        android:id="@+id/sundayStart"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="11dp"
+                        android:background="@drawable/sharp_border"
+                        android:onClick="sundayStart1"
+                        android:padding="@dimen/material_size_4"
+                        android:text="00:00 AM"
+                        android:textColor="@color/black"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="to"
+                        app:layout_constraintBottom_toBottomOf="@+id/sundayStart"
+                        app:layout_constraintEnd_toStartOf="@+id/sundayEnd"
+                        app:layout_constraintStart_toEndOf="@+id/sundayStart"
+                        app:layout_constraintTop_toTopOf="@+id/sundayEnd" />
+
+                    <TextView
+                        android:id="@+id/sundayEnd"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="11dp"
+                        android:background="@drawable/sharp_border"
+                        android:onClick="sundayEnd1"
+                        android:padding="@dimen/material_size_4"
+                        android:text="00:00 AM"
+                        android:textColor="@color/black"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/sundayTxtBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="11dp"
+                        android:background="@android:color/transparent"
+                        android:onClick="sunday"
+                        android:text="+ Add New Slot"
+                        android:textAllCaps="false"
+                        android:textColor="@color/blue"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/sundayStart" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/sundayConstraint"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="11dp"
+                    android:visibility="gone"
+                    app:layout_constraintTop_toBottomOf="@id/constraintLayout14">
+
+                    <TextView
+                        android:id="@+id/sundayStart2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/sharp_border"
+                        android:onClick="sundayStart2"
+                        android:padding="@dimen/material_size_4"
+                        android:text="00:00 AM"
+                        android:textColor="@color/black"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="to"
+                        app:layout_constraintBottom_toBottomOf="@+id/sundayStart2"
+                        app:layout_constraintEnd_toStartOf="@+id/sundayEnd2"
+                        app:layout_constraintStart_toEndOf="@+id/sundayStart2"
+                        app:layout_constraintTop_toTopOf="@+id/sundayEnd2" />
+
+                    <TextView
+                        android:id="@+id/sundayEnd2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/sharp_border"
+                        android:onClick="sundayEnd2"
+                        android:padding="@dimen/material_size_4"
+                        android:text="00:00 AM"
+                        android:textColor="@color/black"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <Button
+                android:id="@+id/save2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="22dp"
+                android:layout_marginTop="22dp"
+                android:layout_marginEnd="22dp"
+                android:layout_marginBottom="22dp"
+                android:background="@drawable/button_bg"
+                android:fontFamily="sans-serif-medium"
+                android:onClick="save"
+                android:text="Save"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout7" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

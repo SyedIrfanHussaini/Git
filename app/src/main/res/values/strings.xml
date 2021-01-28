@@ -1,0 +1,101 @@
+<resources>
+    <string name="app_name">Anrifo</string>
+    <string name="facebook_app_id">472714967047386</string>
+    <string name="fb_login_protocol_scheme">fb472714967047386</string>
+
+    <string-array name="languages">
+        <item>Select Language</item>
+        <item>Algerian Arabic</item>
+        <item>Amharic</item>
+        <item>Assamese</item>
+        <item>Bavarian</item>
+        <item>Bengali</item>
+        <item>Bhojpuri</item>
+        <item>Burmese</item>
+        <item>Cebuano</item>
+        <item>Chhattisgarhi</item>
+        <item>Chittagonian</item>
+        <item>Czech</item>
+        <item>Deccan</item>
+        <item>Dutch</item>
+        <item>Eastern Punjabi</item>
+        <item>Egyptian Arabic</item>
+        <item>English</item>
+        <item>French</item>
+        <item>Gan Chinese</item>
+        <item>German</item>
+        <item>Greek</item>
+        <item>Gujarati</item>
+        <item>Hakka Chinese</item>
+        <item>Hausa</item>
+        <item>Hejazi Arabic</item>
+        <item>Hindi</item>
+        <item>Hungarian</item>
+        <item>Igbo</item>
+        <item>Indonesian</item>
+        <item>Iranian Persian</item>
+        <item>Italian</item>
+        <item>Japanese</item>
+        <item>Javanese</item>
+        <item>Jin Chinese</item>
+        <item>Kannada</item>
+        <item>Kazakh</item>
+        <item>Khmer</item>
+        <item>Kinyarwanda</item>
+        <item>Korean</item>
+        <item>Magahi</item>
+        <item>Maithili</item>
+        <item>Malayalam</item>
+        <item>Malaysian</item>
+        <item>Mandarin Chinese</item>
+        <item>Marathi</item>
+        <item>Mesopotamian Arabic</item>
+        <item>Min Bei Chinese</item>
+        <item>Min Dong Chinese</item>
+        <item>Min Nan Chinese</item>
+        <item>Moroccan Arabic</item>
+        <item>Nepali</item>
+        <item>Nigerian Fulfulde</item>
+        <item>North Levantine Arabic</item>
+        <item>Northern Kurdish</item>
+        <item>Northern Pashto</item>
+        <item>Northern Uzbek</item>
+        <item>Odia</item>
+        <item>Polish</item>
+        <item>Portuguese</item>
+        <item>Romanian</item>
+        <item>Rundi</item>
+        <item>Russian</item>
+        <item>Saʽidi Arabic</item>
+        <item>Sanaani Spoken Arabic</item>
+        <item>Saraiki</item>
+        <item>Sindhi</item>
+        <item>Sinhalese</item>
+        <item>Somali</item>
+        <item>South Azerbaijani</item>
+        <item>South Levantine Arabic</item>
+        <item>Southern Pashto</item>
+        <item>Spanish</item>
+        <item>Sudanese Arabic</item>
+        <item>Sunda</item>
+        <item>Sylheti</item>
+        <item>Tagalog</item>
+        <item>Taʽizzi-Adeni Arabic</item>
+        <item>Tamil</item>
+        <item>Telugu</item>
+        <item>Thai</item>
+        <item>Tunisian Arabic</item>
+        <item>Turkish</item>
+        <item>Ukrainian</item>
+        <item>Urdu</item>
+        <item>Uyghur</item>
+        <item>Vietnamese</item>
+        <item>Western Punjabi</item>
+        <item>Wu Chinese</item>
+        <item>Xiang Chinese</item>
+        <item>Yoruba</item>
+        <item>Yue Chinese</item>
+        <item>	Zulu</item>
+    </string-array>
+
+</resources>

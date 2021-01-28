@@ -1,0 +1,7 @@
+<svg id="mail" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+  <rect id="Area" width="30" height="30" fill="#fcfcfc" opacity="0"/>
+  <g id="Icon" transform="translate(1.29 2.499)">
+    <path id="Path" d="M5,5H25a2.507,2.507,0,0,1,2.5,2.5v15A2.507,2.507,0,0,1,25,25H5a2.507,2.507,0,0,1-2.5-2.5V7.5A2.507,2.507,0,0,1,5,5Z" transform="translate(-1.29 -2.499)" fill="none" stroke="#3d3d3d" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"/>
+    <path id="Path-2" data-name="Path" d="M27.5,7.5,15,16.25,2.5,7.5" transform="translate(-1.29 -2.499)" fill="none" stroke="#3d3d3d" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"/>
+  </g>
+</svg>

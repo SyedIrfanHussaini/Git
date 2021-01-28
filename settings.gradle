@@ -1,0 +1,3 @@
+include ':my application'
+include ':app'
+rootProject.name = "Anrifo"

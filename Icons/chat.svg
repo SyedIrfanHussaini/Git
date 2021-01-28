@@ -1,0 +1,6 @@
+<svg id="chat" xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200">
+  <rect id="Area" width="200" height="200" fill="#fcfcfc" opacity="0"/>
+  <g id="Icon" transform="translate(1.29 2.499)">
+    <path id="Path" d="M175,125a16.667,16.667,0,0,1-16.667,16.667h-100L25,175V41.667A16.667,16.667,0,0,1,41.667,25H158.333A16.667,16.667,0,0,1,175,41.667Z" transform="translate(-1.29 -2.499)" fill="none" stroke="#3d3d3d" stroke-linecap="round" stroke-linejoin="round" stroke-width="16.667"/>
+  </g>
+</svg>

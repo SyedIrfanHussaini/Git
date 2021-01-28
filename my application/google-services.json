@@ -1,0 +1,91 @@
+{
+  "project_info": {
+    "project_number": "308785011948",
+    "firebase_url": "https://consultancy---android-default-rtdb.firebaseio.com",
+    "project_id": "consultancy---android",
+    "storage_bucket": "consultancy---android.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:308785011948:android:be319c973a653369a219c9",
+        "android_client_info": {
+          "package_name": "com.anrifo.myapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "308785011948-qv4precf60ktjnaobflmua0s7pbhuul5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBL2bIe3lHhCJI-OwPuNfsRgM3Dy4gn6RA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "308785011948-qv4precf60ktjnaobflmua0s7pbhuul5.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "308785011948-7i8qfe5v99nqvsprih2filgm0663tkon.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.syed.syed"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:308785011948:android:28e3bbdca2e2139aa219c9",
+        "android_client_info": {
+          "package_name": "com.osdifa.anrifo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "308785011948-3njat1bopc1d15pbp3uqqvvmh3l3oo7b.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.osdifa.anrifo",
+            "certificate_hash": "07386ae1299342660646a8e6cb07b669c0bdb29c"
+          }
+        },
+        {
+          "client_id": "308785011948-qv4precf60ktjnaobflmua0s7pbhuul5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBL2bIe3lHhCJI-OwPuNfsRgM3Dy4gn6RA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "308785011948-qv4precf60ktjnaobflmua0s7pbhuul5.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "308785011948-7i8qfe5v99nqvsprih2filgm0663tkon.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.syed.syed"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

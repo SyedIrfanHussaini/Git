@@ -1,0 +1,9 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="Theme.Anrifo" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/darkBlue</item>
+        <item name="colorSecondary">@color/blue</item>
+        <item name="colorAccent">@color/lightBlue</item>
+
+    </style>
+</resources>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cnb_unselectedColor="@color/white">
+
+    <item
+        android:id="@+id/requests"
+        android:icon="@drawable/request"
+        android:title="Requests"
+        app:cnb_backgroundColor="@color/white"
+        app:cnb_iconColor="@color/blue"
+        app:cnb_textColor="@color/blue" />
+
+    <item
+        android:id="@+id/settings"
+        android:icon="@drawable/settings"
+        android:title="Settings"
+        app:cnb_backgroundColor="@color/white"
+        app:cnb_iconColor="@color/blue"
+        app:cnb_textColor="@color/blue" />
+
+    <item
+        android:id="@+id/images"
+        android:icon="@drawable/image"
+        android:title="Images"
+        app:cnb_backgroundColor="@color/white"
+        app:cnb_iconColor="@color/blue"
+        app:cnb_textColor="@color/blue" />
+
+</menu>
